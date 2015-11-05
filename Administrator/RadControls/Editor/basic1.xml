@@ -1,0 +1,33 @@
+﻿<root>
+	<modules>
+		<module name="RadEditorStatistics" dockingZone="Bottom" enabled="true" visible="true"/>	
+	</modules>
+	<tools name="MainToolbar" dockable="true">			
+		<tool separator="true"/>		
+		<tool separator="true"/>
+		<tool name="Undo" shortcut="CTRL+Z"/>
+		<tool name="Redo" shortcut="CTRL+Y"/>
+	</tools>	
+	<tools>		
+		<tool name="LinkManager" shortcut="CTRL+K"/>
+		<tool name="Unlink" shortcut="CTRL+SHIFT+K"/>
+						
+	</tools>		
+	<tools isribbon = "false">
+		<tool name="Bold" shortcut="CTRL+B"/>
+		<tool name="Italic" shortcut="CTRL+I"/>
+		<tool name="Underline" shortcut="CTRL+U"/>
+		<tool name="StrikeThrough" />
+		<tool separator="true"/>
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+		<tool name="JustifyNone" />
+		<tool separator="true"/>
+		<tool name="Indent" />
+		<tool name="Outdent" />
+		<tool name="InsertOrderedList" />
+		<tool name="InsertUnorderedList" />
+	</tools>
+</root>

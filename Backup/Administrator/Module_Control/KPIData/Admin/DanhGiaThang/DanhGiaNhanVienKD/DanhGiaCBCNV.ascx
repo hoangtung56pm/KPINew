@@ -1,0 +1,524 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DanhGiaCBCNV.ascx.cs"
+    Inherits="VmgPortal.Modules.KPIData.Admin.DanhGiaThang.DanhGiaNhanVienKD.DanhGiaCBCNV" %>
+<%--<%@ Register Assembly="RadTabStrip.Net2" Namespace="Telerik.WebControls" TagPrefix="radTS" %>--%>
+<%--<%@ Register Src="DanhGiaCBCNV_KhoiLuong.ascx" TagName="DanhGiaCBCNV_KhoiLuong" TagPrefix="uc1" %>
+<%@ Register Src="DanhGiaCBCNV_KyLuat.ascx" TagName="DanhGiaCBCNV_KyLuat" TagPrefix="uc2" %>--%>
+<%--<%@ Register Src="DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx" TagName="DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat"
+    TagPrefix="uc3" %>--%>
+<%--<%@ Register Src="DanhGiaCBCNV_KhoiLuongCVKTX.ascx" TagName="DanhGiaCBCNV_KhoiLuongCVKTX"
+    TagPrefix="uc4" %>
+<%@ Register Src="DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx" TagName="DanhGiaCBCNV_KhoiLuongCVPhatSinh"
+    TagPrefix="uc5" %>--%>
+<%--<table align="center" id="tableAlert" runat="server" cellpadding="0" cellspacing="0"
+    border="0" width="100%">
+    <tr>
+        <td align="center" style="font-size: 14px; color: Blue; font-weight: bold" class="InputBox">
+            Bạn chưa đủ điều kiện để tham gia đợt đánh giá này. Xin vui lòng liên hệ phòng HCNS
+            để được hỗ trợ.
+        </td>
+    </tr>
+</table>
+<table align="center" id="tableContent" runat="server" cellpadding="0" cellspacing="0"
+    border="0" width="100%">
+    <tr>
+        <td style="height: 5px">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" class="InputBox" style="width: 100%;">
+            <table>
+                <tr>
+                    <td>
+                        Kết quả đánh giá của bạn
+                        <asp:Label ID="lblName" runat="server" Font-Bold="true" ForeColor="Blue"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <b>Chú ý:</b> được chấm điểm lẻ đến 0,5 (lưu ý là dùng dấu "phẩy" khi để điểm lẻ)
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 15px">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" class="InputBox" style="width: 100%;">
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                <tr>
+                    <td class="textcenter">
+                        <b style="color: #dede">KPI cá nhân
+                            <br />
+                            (60%)</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Điểm đánh giá đơn vị
+                            <br />
+                            (10%)</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Lợi nhuận công ty
+                            <br />
+                            (10%)</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Lợi nhuận bộ phận
+                            <br />
+                            (10%)</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Quản lý công việc, chủ động, làm việc nhóm
+                            <br />
+                            (5%)</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Kỷ luật cá nhân
+                            <br />
+                            (5%)</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Điểm thưởng</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Mức độ hoàn thành</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Xếp loại</b>
+                    </td>
+                    <td class="textcenter">
+                        <b style="color: #dede">Hệ số lương mềm</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblTyLeHoanThanh" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblDiemDanhGiaDonVi" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblDiemHoanThanhLoiNhuanCongTy" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblDiemHoanThanhLoiNhuanBoPhan" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblDiemPhoiHop" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblDiemKyLuat" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblDiemThuong" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblMucDoHoanThanh" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblXepLoai" runat="server"></asp:Label></b>
+                    </td>
+                    <td class="textcenter colorBlue">
+                        <b>
+                            <asp:Label ID="lblHeSoLuongMem" runat="server"></asp:Label></b>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 15px">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" class="InputBox" style="width: 100%;">
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                <tr>
+                    <td colspan="7" align="center">
+                        <asp:Button ID="btnSumit" runat="server" CssClass="solidButton" Height="40px" Text="Gửi đánh giá"
+                            OnClick="btnSumit_Click" />
+                        <asp:Button ID="btnYeuCauLamLaiDanhGia" runat="server" CssClass="solidButton" Height="40px"
+                            Text="Yêu cầu làm lại đánh giá" OnClick="btnYeuCauLamLaiDanhGia_Click" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 15px">
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" class="InputBox" style="width: 100%;">
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                <tr>
+                    <td align="left" width="420px">
+                        Chọn đợt đánh giá:
+                        <asp:DropDownList AutoPostBack="true" Width="300px" ID="dropDotDanhGia" runat="server"
+                            DataTextField="Ten" DataValueField="ID" OnSelectedIndexChanged="dropDotDanhGia_SelectedIndexChanged">
+                        </asp:DropDownList>
+                    </td>
+                    <td colspan="6" align="left">
+                        <table width="100%" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <td align="center">
+                                    <b>CV thường xuyên</b>
+                                </td>
+                                <td align="center">
+                                    <b>CV kế hoạch tháng</b>
+                                </td>
+                                <td align="center" id="tdCVPS" runat="server">
+                                    <b>CV Phát sinh</b>
+                                </td>
+                                <td align="center">
+                                    <b>Tổng % Công việc</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b style="color: Blue;">
+                                        <asp:Label ID="lblCVTX" runat="server" Font-Bold="true">34%</asp:Label></b>
+                                </td>
+                                <td align="center">
+                                    <b style="color: Blue;">
+                                        <asp:Label ID="lblCVKTX" runat="server" Font-Bold="true">34%</asp:Label></b>
+                                </td>
+                                <td align="center" id="tdCVPSValue" runat="server">
+                                    <b style="color: Blue;">
+                                        <asp:Label ID="lblCVPhatSinh" runat="server" Font-Bold="true"></asp:Label></b>
+                                </td>
+                                <td align="center">
+                                    <b style="color: Blue;">
+                                        <asp:Label ID="lblTotal" runat="server" Font-Bold="true">100%</asp:Label></b>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 15px">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="float: left; width: 1300px;">
+                <radTS:RadTabStrip ID="RadTabStrip1" ScrollButtonsPosition="Middle" ScrollChildren="true"
+                    SelectedIndex="0" PerTabScrolling="true" CssClass="tabStrip" runat="server" Skin="Web20"
+                    MultiPageID="RadMultiPage1">
+                    <Tabs>
+                        <radTS:Tab runat="server" ID="tabTyTrongCongViec" Text="CÔNG VIỆC THƯỜNG XUYÊN" TabIndex="1">
+                        </radTS:Tab>
+                        <radTS:Tab runat="server" ID="tab1" Text="CÔNG VIỆC KẾ HOẠCH THÁNG" TabIndex="2">
+                        </radTS:Tab>
+                        <radTS:Tab runat="server" ID="tab2" Text="CÔNG VIỆC PHÁT SINH" TabIndex="3">
+                        </radTS:Tab>
+                        <radTS:Tab runat="server" ID="tabTDVaKyLuat" Text="KỶ LUẬT VÀ PHỐI HỢP" TabIndex="2">
+                        </radTS:Tab>
+                    </Tabs>
+                </radTS:RadTabStrip>
+                <radTS:RadMultiPage ID="RadMultiPage1" runat="server" SelectedIndex="0">
+                    <radTS:PageView ID="pageKhoiLuongCongViec" runat="server" Width="100%">
+                        <uc1:DanhGiaCBCNV_KhoiLuong ID="DanhGiaCBCNV_KhoiLuong1" runat="server" />
+                    </radTS:PageView>
+                    <radTS:PageView ID="PageView1" runat="server" Width="100%">
+                        <uc4:DanhGiaCBCNV_KhoiLuongCVKTX ID="DanhGiaCBCNV_KhoiLuongCVKTX1" runat="server" />
+                    </radTS:PageView>
+                    <radTS:PageView ID="PageView4" runat="server" Width="100%">
+                        <uc5:DanhGiaCBCNV_KhoiLuongCVPhatSinh ID="DanhGiaCBCNV_KhoiLuongCVPhatSinh1" runat="server" />
+                    </radTS:PageView>
+                    <radTS:PageView ID="PageView2" runat="server" Width="100%">
+                        <uc2:DanhGiaCBCNV_KyLuat ID="DanhGiaCBCNV_KyLuat1" runat="server" />
+                    </radTS:PageView>
+                </radTS:RadMultiPage>
+            </div>
+        </td>
+    </tr>
+</table>
+--%>
+<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<div class="row">
+    <div class="col-md-12">
+        <div class="tabbable tabbable-custom boxless">
+            <table align="center" id="tableAlert" runat="server" cellpadding="0" cellspacing="0"
+                border="0" width="100%">
+                <tr>
+                    <td align="center" style="font-size: 14px; color: Blue; font-weight: bold" class="InputBox">
+                        Bạn chưa đủ điều kiện để tham gia đợt đánh giá này. Xin vui lòng liên hệ phòng HCNS
+                        để được hỗ trợ.
+                    </td>
+                </tr>
+            </table>
+            <table align="center" id="tableContent" runat="server" cellpadding="0" cellspacing="0"
+                border="0" width="100%">
+                <tr>
+                    <td style="height: 5px">
+                    </td>
+                </tr>
+                <%--<tr>
+                    <td valign="top" class="InputBox" style="width: 100%;">
+                        <table>
+                            <tr>
+                                <td>
+                                    Kết quả đánh giá của bạn
+                                    <asp:Label ID="lblName" runat="server" Font-Bold="true" ForeColor="Blue"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br />
+                                    <b>Chú ý:</b> được chấm điểm lẻ đến 0,5 (lưu ý là dùng dấu "phẩy" khi để điểm lẻ)
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 15px">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="InputBox" style="width: 100%;">
+                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                            <tr>
+                                <td align="center">
+                                    <b style="color: #dede">KPI cá nhân
+                                        <br />
+                                        (60%)</b>
+                                </td>
+                                <td align="center">
+                                    <b style="color: #dede">Điểm đánh giá đơn vị
+                                        <br />
+                                        (10%)</b>
+                                </td>
+                                <td align="center">
+                                    <b style="color: #dede">Lợi nhuận công ty
+                                        <br />
+                                        (10%)</b>
+                                </td>
+                                <td class="textcenter">
+                                    <b style="color: #dede">Lợi nhuận bộ phận
+                                        <br />
+                                        (10%)</b>
+                                </td>
+                                <td align="center">
+                                    <b style="color: #dede">Quản lý công việc, chủ động, làm việc nhóm
+                                        <br />
+                                        (5%)</b>
+                                </td>
+                                <td align="center">
+                                    <b style="color: #dede">Kỷ luật cá nhân
+                                        <br />
+                                        (5%)</b>
+                                </td>
+                                <td align="center" valign="top">
+                                    <b style="color: #dede">Điểm thưởng</b>
+                                </td>
+                                <td align="center" valign="top">
+                                    <b style="color: #dede">Mức độ hoàn thành</b>
+                                </td>
+                                <td align="center" valign="top">
+                                    <b style="color: #dede">Xếp loại</b>
+                                </td>
+                                <td class="textcenter" valign="top">
+                                    <b style="color: #dede">Hệ số lương mềm</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblTyLeHoanThanh" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblDiemDanhGiaDonVi" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblDiemHoanThanhLoiNhuanCongTy" runat="server"></asp:Label></b>
+                                </td>
+                                <td class="textcenter colorBlue">
+                                    <b>
+                                        <asp:Label ID="lblDiemHoanThanhLoiNhuanBoPhan" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblDiemPhoiHop" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblDiemKyLuat" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblDiemThuong" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblMucDoHoanThanh" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblXepLoai" runat="server"></asp:Label></b>
+                                </td>
+                                <td align="center" style="color: Blue">
+                                    <b>
+                                        <asp:Label ID="lblHeSoLuongMem" runat="server"></asp:Label></b>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 15px">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="InputBox" style="width: 100%;">
+                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                            <tr>
+                                <td colspan="7" align="center">
+                                    <asp:Button ID="btnSumit" runat="server" CssClass="btn blue" Height="40px" Text="Gửi đánh giá"
+                                        OnClick="btnSumit_Click" />
+                                    <asp:Button ID="btnYeuCauLamLaiDanhGia" runat="server" CssClass="btn green" Height="40px"
+                                        Text="Yêu cầu làm lại đánh giá" OnClick="btnYeuCauLamLaiDanhGia_Click" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 15px">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="InputBox" style="width: 100%;">
+                        <table width="100%" border="0" cellpadding="2" cellspacing="2">
+                            <tr>
+                                <td width="120px">
+                                    Chọn đợt đánh giá:
+                                </td>
+                                <td align="left" width="300px">
+                                    <asp:DropDownList AutoPostBack="true" CssClass="form-control" Width="300px" ID="dropDotDanhGia"
+                                        runat="server" DataTextField="Ten" DataValueField="ID" OnSelectedIndexChanged="dropDotDanhGia_SelectedIndexChanged">
+                                    </asp:DropDownList>
+                                </td>
+                                <td>
+                                    <table width="100%" cellpadding="5" cellspacing="0">
+                                        <tr>
+                                            <td align="center">
+                                                <b>CV thường xuyên</b>
+                                            </td>
+                                            <td align="center">
+                                                <b>CV kế hoạch tháng</b>
+                                            </td>
+                                            <td align="center" id="tdCVPS" runat="server">
+                                                <b>CV Phát sinh</b>
+                                            </td>
+                                            <td align="center">
+                                                <b>Tổng % Công việc</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <b style="color: Blue;">
+                                                    <asp:Label ID="lblCVTX" runat="server" Font-Bold="true">34%</asp:Label></b>
+                                            </td>
+                                            <td align="center">
+                                                <b style="color: Blue;">
+                                                    <asp:Label ID="lblCVKTX" runat="server" Font-Bold="true">34%</asp:Label></b>
+                                            </td>
+                                            <td align="center" id="tdCVPSValue" runat="server">
+                                                <b style="color: Blue;">
+                                                    <asp:Label ID="lblCVPhatSinh" runat="server" Font-Bold="true"></asp:Label></b>
+                                            </td>
+                                            <td align="center">
+                                                <b style="color: Blue;">
+                                                    <asp:Label ID="lblTotal" runat="server" Font-Bold="true">100%</asp:Label></b>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 15px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab_0"><b>CÔNG VIỆC THƯỜNG XUYÊN</b></a></li>
+                            <li class=""><a data-toggle="tab" href="#tab_1"><b>CÔNG VIỆC KẾ HOẠCH THÁNG</b></a></li>
+                            <li class=""><a data-toggle="tab" href="#tab_2"><b>CÔNG VIỆC PHÁT SINH</b></a></li>
+                            <li class=""><a data-toggle="tab" href="#tab_3"><b>KỶ LUẬT VÀ PHỐI HỢP</b></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab_0" class="tab-pane active">
+                                <div class="portlet box grey">
+                                    <div class="portlet-body form">
+                                        <asp:UpdatePanel ID="updateDanhGiaCBCNV_KhoiLuong1" runat="server">
+                                            <ContentTemplate>
+                                                <uc1:DanhGiaCBCNV_KhoiLuong ID="DanhGiaCBCNV_KhoiLuong1" runat="server" />
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_1" class="tab-pane">
+                                <div class="portlet box grey">
+                                    <div class="portlet-body form">
+                                        <asp:UpdatePanel ID="updateDanhGiaCBCNV_KhoiLuongCVKTX1" runat="server">
+                                            <ContentTemplate>
+                                                <uc4:DanhGiaCBCNV_KhoiLuongCVKTX ID="DanhGiaCBCNV_KhoiLuongCVKTX1" runat="server" />
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_2" class="tab-pane">
+                                <div class="portlet box grey">
+                                    <div class="portlet-body form">
+                                        <asp:UpdatePanel ID="updateDanhGiaCBCNV_KhoiLuongCVPhatSinh1" runat="server">
+                                            <ContentTemplate>
+                                                <uc5:DanhGiaCBCNV_KhoiLuongCVPhatSinh ID="DanhGiaCBCNV_KhoiLuongCVPhatSinh1" runat="server" />
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab_3" class="tab-pane">
+                                <div class="portlet box grey">
+                                    <div class="portlet-body form">
+                                        <asp:UpdatePanel ID="updateDanhGiaCBCNV_KyLuat1" runat="server">
+                                            <ContentTemplate>
+                                                <uc2:DanhGiaCBCNV_KyLuat ID="DanhGiaCBCNV_KyLuat1" runat="server" />
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>--%>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC0722C7-7D89-4B1C-85D2-B86351B783C8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VmgPortal.Modules.KPIData</RootNamespace>
+    <AssemblyName>VmgPortal.Modules.KPIData</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\Reference\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="RadTabStrip.Net2">
+      <HintPath>..\..\..\Reference\RadTabStrip.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="SlimeeLibrary">
+      <HintPath>..\..\..\Reference\SlimeeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.QuickStart, Version=1.0.2298.19374, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\Telerik.QuickStart.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\BaoCao\BaoCaoNgayBoPhan.ascx.cs">
+      <DependentUpon>BaoCaoNgayBoPhan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\BaoCaoNgayBoPhan.ascx.designer.cs">
+      <DependentUpon>BaoCaoNgayBoPhan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoTienDoThucHienDanhGiaCheckPoint.ascx.cs">
+      <DependentUpon>BaoCaoTienDoThucHienDanhGiaCheckPoint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoTienDoThucHienDanhGiaCheckPoint.ascx.designer.cs">
+      <DependentUpon>BaoCaoTienDoThucHienDanhGiaCheckPoint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoXepLoaiDanhGiaCaNhanCheckPoint.ascx.cs">
+      <DependentUpon>BaoCaoXepLoaiDanhGiaCaNhanCheckPoint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoXepLoaiDanhGiaCaNhanCheckPoint.ascx.designer.cs">
+      <DependentUpon>BaoCaoXepLoaiDanhGiaCaNhanCheckPoint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KeHoachThang\NhanVien\KeHoachCBCNV.ascx.cs">
+      <DependentUpon>KeHoachCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KeHoachThang\NhanVien\KeHoachCBCNV.ascx.designer.cs">
+      <DependentUpon>KeHoachCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KeHoachThang\NhanVien\KeHoachCongViec.ascx.cs">
+      <DependentUpon>KeHoachCongViec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KeHoachThang\NhanVien\KeHoachCongViec.ascx.designer.cs">
+      <DependentUpon>KeHoachCongViec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\TongHopBaoCaoNgayNhanVien.ascx.cs">
+      <DependentUpon>TongHopBaoCaoNgayNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\TongHopBaoCaoNgayNhanVien.ascx.designer.cs">
+      <DependentUpon>TongHopBaoCaoNgayNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuong.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuong.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoTienDoThucHienDanhGia.ascx.cs">
+      <DependentUpon>BaoCaoTienDoThucHienDanhGia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoTienDoThucHienDanhGia.ascx.designer.cs">
+      <DependentUpon>BaoCaoTienDoThucHienDanhGia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoXepLoaiDanhGiaCaNhan.ascx.cs">
+      <DependentUpon>BaoCaoXepLoaiDanhGiaCaNhan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoXepLoaiDanhGiaCaNhan.ascx.designer.cs">
+      <DependentUpon>BaoCaoXepLoaiDanhGiaCaNhan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoCongViecNhanVien.ascx.cs">
+      <DependentUpon>BaoCaoCongViecNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\BaoCaoCongViecNhanVien.ascx.designer.cs">
+      <DependentUpon>BaoCaoCongViecNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\ImportXepLoaiDanhGiaCaNhan.ascx.cs">
+      <DependentUpon>ImportXepLoaiDanhGiaCaNhan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\ImportXepLoaiDanhGiaCaNhan.ascx.designer.cs">
+      <DependentUpon>ImportXepLoaiDanhGiaCaNhan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\NhanVien\BaoCaoKetQuaDanhGiaCacThang.ascx.cs">
+      <DependentUpon>BaoCaoKetQuaDanhGiaCacThang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\NhanVien\BaoCaoKetQuaDanhGiaCacThang.ascx.designer.cs">
+      <DependentUpon>BaoCaoKetQuaDanhGiaCacThang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\NhanVien\BaoCaoTyTrongCVCuaNhanVien.ascx.cs">
+      <DependentUpon>BaoCaoTyTrongCVCuaNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BaoCao\XepLoaiThang\NhanVien\BaoCaoTyTrongCVCuaNhanVien.ascx.designer.cs">
+      <DependentUpon>BaoCaoTyTrongCVCuaNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVienKD\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVienKD\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuong.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuong.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KyLuat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KyLuat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DinhNghia\ChucDanh.ascx.cs">
+      <DependentUpon>ChucDanh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DinhNghia\ChucDanh.ascx.designer.cs">
+      <DependentUpon>ChucDanh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV_KyLuat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV_KyLuat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV_KyLuat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV_KyLuat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV_KyLuat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV_KyLuat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuong.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuong.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KyLuat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KyLuat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_LanhDao_KD.ascx.cs">
+      <DependentUpon>DanhGiaThang_LanhDao_KD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_LanhDao_KD.ascx.designer.cs">
+      <DependentUpon>DanhGiaThang_LanhDao_KD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_LanhDao_HT.ascx.cs">
+      <DependentUpon>DanhGiaThang_LanhDao_HT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_LanhDao_HT.ascx.designer.cs">
+      <DependentUpon>DanhGiaThang_LanhDao_HT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_TPVaPP_KD.ascx.cs">
+      <DependentUpon>DanhGiaThang_TPVaPP_KD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_TPVaPP_KD.ascx.designer.cs">
+      <DependentUpon>DanhGiaThang_TPVaPP_KD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_TPVaPP_HT.ascx.cs">
+      <DependentUpon>DanhGiaThang_TPVaPP_HT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_TPVaPP_HT.ascx.designer.cs">
+      <DependentUpon>DanhGiaThang_TPVaPP_HT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuong.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuong.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuongCVKTX.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVKTX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KyLuat.ascx.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KyLuat.ascx.designer.cs">
+      <DependentUpon>DanhGiaCBCNV_KyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia_DanhGiaCheo.ascx.cs">
+      <DependentUpon>DotDanhGia_DanhGiaCheo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia_DanhGiaCheo.ascx.designer.cs">
+      <DependentUpon>DotDanhGia_DanhGiaCheo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViec.ascx.cs">
+      <DependentUpon>QuanLyCongViec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViec.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia_TLHTCongViec.ascx.cs">
+      <DependentUpon>DotDanhGia_TLHTCongViec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia_TLHTCongViec.ascx.designer.cs">
+      <DependentUpon>DotDanhGia_TLHTCongViec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecBaoCaoNgay.ascx.cs">
+      <DependentUpon>QuanLyCongViecBaoCaoNgay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecBaoCaoNgay.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecBaoCaoNgay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyGiaoViec.ascx.cs">
+      <DependentUpon>QuanLyGiaoViec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyGiaoViec.ascx.designer.cs">
+      <DependentUpon>QuanLyGiaoViec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecPSVaNhanVien.ascx.cs">
+      <DependentUpon>QuanLyCongViecPSVaNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecPSVaNhanVien.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecPSVaNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKTXVaNhanVien.ascx.cs">
+      <DependentUpon>QuanLyCongViecKTXVaNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKTXVaNhanVien.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecKTXVaNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecPS.ascx.cs">
+      <DependentUpon>QuanLyCongViecPS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecPS.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecPS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKTX.ascx.cs">
+      <DependentUpon>QuanLyCongViecKTX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKTX.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecKTX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia_Config.ascx.cs">
+      <DependentUpon>DotDanhGia_Config.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia_Config.ascx.designer.cs">
+      <DependentUpon>DotDanhGia_Config.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DanhGiaThang_DGNhanVien.ascx.cs">
+      <DependentUpon>DanhGiaThang_DGNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DanhGiaThang_DGNhanVien.ascx.designer.cs">
+      <DependentUpon>DanhGiaThang_DGNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyNhanVienTheoNDG.ascx.cs">
+      <DependentUpon>QuanLyNhanVienTheoNDG.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyNhanVienTheoNDG.ascx.designer.cs">
+      <DependentUpon>QuanLyNhanVienTheoNDG.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaBoPhan.ascx.cs">
+      <DependentUpon>DotDanhGiaBoPhan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaBoPhan.ascx.designer.cs">
+      <DependentUpon>DotDanhGiaBoPhan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaCBCNVPhanNhomNhanVien.ascx.cs">
+      <DependentUpon>DotDanhGiaCBCNVPhanNhomNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaCBCNVPhanNhomNhanVien.ascx.designer.cs">
+      <DependentUpon>DotDanhGiaCBCNVPhanNhomNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaCBCNVChonNDG.ascx.cs">
+      <DependentUpon>DotDanhGiaCBCNVChonNDG.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaCBCNVChonNDG.ascx.designer.cs">
+      <DependentUpon>DotDanhGiaCBCNVChonNDG.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaTruongBoPhanChiTiet.ascx.cs">
+      <DependentUpon>DotDanhGiaTruongBoPhanChiTiet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaTruongBoPhanChiTiet.ascx.designer.cs">
+      <DependentUpon>DotDanhGiaTruongBoPhanChiTiet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia.ascx.cs">
+      <DependentUpon>DotDanhGia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGia.ascx.designer.cs">
+      <DependentUpon>DotDanhGia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaCBCNVChiTiet.ascx.cs">
+      <DependentUpon>DotDanhGiaCBCNVChiTiet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\DotDanhGiaCBCNVChiTiet.ascx.designer.cs">
+      <DependentUpon>DotDanhGiaCBCNVChiTiet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKPI.ascx.cs">
+      <DependentUpon>QuanLyCongViecKPI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKPI.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecKPI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKPIVaNhanVine.ascx.cs">
+      <DependentUpon>QuanLyCongViecKPIVaNhanVine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\QuanLyCongViecKPIVaNhanVine.ascx.designer.cs">
+      <DependentUpon>QuanLyCongViecKPIVaNhanVine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\XemCongViecKPIGiaoChoNhanVien.ascx.cs">
+      <DependentUpon>XemCongViecKPIGiaoChoNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DotDanhGia\XemCongViecKPIGiaoChoNhanVien.ascx.designer.cs">
+      <DependentUpon>XemCongViecKPIGiaoChoNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhanMaNhom.ascx.cs">
+      <DependentUpon>BoPhanMaNhom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhanMaNhom.ascx.designer.cs">
+      <DependentUpon>BoPhanMaNhom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DiemKyLuat5S.ascx.cs">
+      <DependentUpon>BoPhan_DiemKyLuat5S.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DiemKyLuat5S.ascx.designer.cs">
+      <DependentUpon>BoPhan_DiemKyLuat5S.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_KetQua.ascx.cs">
+      <DependentUpon>BoPhan_KetQua.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_KetQua.ascx.designer.cs">
+      <DependentUpon>BoPhan_KetQua.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DangGiaSangTao.ascx.cs">
+      <DependentUpon>BoPhan_DangGiaSangTao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DangGiaSangTao.ascx.designer.cs">
+      <DependentUpon>BoPhan_DangGiaSangTao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DanhGiaKyLuat.ascx.cs">
+      <DependentUpon>BoPhan_DanhGiaKyLuat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DanhGiaKyLuat.ascx.designer.cs">
+      <DependentUpon>BoPhan_DanhGiaKyLuat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\PhongBan.ascx.cs">
+      <DependentUpon>PhongBan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\PhongBan.ascx.designer.cs">
+      <DependentUpon>PhongBan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DiemSangTaoManagement.ascx.cs">
+      <DependentUpon>BoPhan_DiemSangTaoManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PhongBan\BoPhan_DiemSangTaoManagement.ascx.designer.cs">
+      <DependentUpon>BoPhan_DiemSangTaoManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XepLoaiNhom\XepLoaiNhom.ascx.cs">
+      <DependentUpon>XepLoaiNhom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XepLoaiNhom\XepLoaiNhom.ascx.designer.cs">
+      <DependentUpon>XepLoaiNhom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\BoPhan\BoPhanController.cs" />
+    <Compile Include="Library\BoPhan\BoPhanInfo.cs" />
+    <Compile Include="Library\Common\CommonController.cs" />
+    <Compile Include="Library\Constants.cs" />
+    <Compile Include="Library\CreateExcelDoc.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaNangLucNhanVienInfo.cs" />
+    <Compile Include="Library\DateConverter.cs" />
+    <Compile Include="Library\DinhNghia\TongHopDanhGiaCaNhanThangController.cs" />
+    <Compile Include="Library\DinhNghia\TongHopDanhGiaCaNhanThangInfo.cs" />
+    <Compile Include="Library\DotDanhGia\DotDanhGiaDanhGiaCheoInfo.cs" />
+    <Compile Include="Library\DotDanhGia\DotDanhGiaTLHTCVInfo.cs" />
+    <Compile Include="Library\DotDanhGia\QuanLyCongViecBaoCaoNgayController.cs" />
+    <Compile Include="Library\DotDanhGia\QuanLyCongViecBaoCaoNgayInfo.cs" />
+    <Compile Include="Library\DotDanhGia\QuanLyCongViecKTXVaPSController.cs" />
+    <Compile Include="Library\DotDanhGia\QuanLyCongViecKTXVaPSInfo.cs" />
+    <Compile Include="Library\ImportExcelToDataTable.cs" />
+    <Compile Include="Library\PhongBan\NhomCongViecInfo.cs" />
+    <Compile Include="Library\PhongBan\PhongBanController.cs" />
+    <Compile Include="Library\PhongBan\PhongBanInfo.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaBoPhanTDvaKLController.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaBoPhanTDvaKLInfo.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaBoPhanChiTietController.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaBoPhanChiTietInfo.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaBoPhanTTCVController.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaBoPhanTTCVInfo.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaThang_BoPhanTTCVController.cs" />
+    <Compile Include="Library\DanhGiaBoPhan\DanhGiaThang_BoPhanTTCVInfo.cs" />
+    <Compile Include="Library\DanhGia\DanhGiaThang_DGCBCNVDanhGiaTTCVController.cs" />
+    <Compile Include="Library\DanhGia\DanhGiaThang_DGCBCNVDanhGiaTTCVInfo.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaChiTietController.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaChiTietInfo.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaCLCVController.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaCLCVInfo.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaTDvaKLController.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaTDvaKLInfo.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaTTCVController.cs" />
+    <Compile Include="Library\DanhGia\DGCBCNVDanhGiaTTCVInfo.cs" />
+    <Compile Include="Library\DinhNghia\DinhNghiaController.cs" />
+    <Compile Include="Library\DinhNghia\DotDanhGiaInfo.cs" />
+    <Compile Include="Library\DotDanhGia\DotDanhGiaConfigInfo.cs" />
+    <Compile Include="Library\DotDanhGia\DotDanhGiaController.cs" />
+    <Compile Include="Library\DotDanhGia\DotDanhGiaInfo.cs" />
+    <Compile Include="Library\DotDanhGia\QuanLyCongViecKPIController.cs" />
+    <Compile Include="Library\DotDanhGia\QuanLyCongViecKPIInfo.cs" />
+    <Compile Include="Library\GridViewTemplate.cs" />
+    <Compile Include="Library\Nhom\NhomController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\Nhom\NhomInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\Providers\DataAccessProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\Providers\SqlDataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\XepLoaiNhom\XepLoaiNhomController.cs" />
+    <Compile Include="Library\XepLoaiNhom\XepLoaiNhomInfo.cs" />
+    <Compile Include="Library\XepLoai\XepLoaiController.cs" />
+    <Compile Include="Library\XepLoai\XepLoaiInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\VmgPortal.Library.csproj">
+      <Project>{820F5C42-7F85-445A-A220-B9D493A892CF}</Project>
+      <Name>VmgPortal.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogFile\VmgPortal.Modules.LogFile.csproj">
+      <Project>{B3C9456B-FD51-4AA6-954C-F263168ED3E4}</Project>
+      <Name>VmgPortal.Modules.LogFile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\BaoCao\BaoCaoNgayBoPhan.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\BaoCaoTienDoThucHienDanhGiaCheckPoint.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\BaoCaoXepLoaiDanhGiaCaNhanCheckPoint.ascx" />
+    <Content Include="Admin\KeHoachThang\NhanVien\KeHoachCBCNV.ascx" />
+    <Content Include="Admin\KeHoachThang\NhanVien\KeHoachCongViec.ascx" />
+    <Content Include="Admin\BaoCao\TongHopBaoCaoNgayNhanVien.ascx" />
+    <Content Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuong.ascx" />
+    <Content Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuongCVKTX.ascx" />
+    <Content Include="Admin\BaoCao\HoTroCongViec\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\BaoCaoTienDoThucHienDanhGia.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\BaoCaoXepLoaiDanhGiaCaNhan.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\BaoCaoCongViecNhanVien.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\ImportXepLoaiDanhGiaCaNhan.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\NhanVien\BaoCaoKetQuaDanhGiaCacThang.ascx" />
+    <Content Include="Admin\BaoCao\XepLoaiThang\NhanVien\BaoCaoTyTrongCVCuaNhanVien.ascx" />
+    <Content Include="Admin\DanhGiaThang\DanhGiaNhanVienKD\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx" />
+    <Content Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuongCVKTX.ascx" />
+    <Content Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KhoiLuong.ascx" />
+    <Content Include="Admin\DanhGiaThang\DanhGiaNhanVien\DanhGiaCBCNV_KyLuat.ascx" />
+    <Content Include="Admin\DinhNghia\ChucDanh.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\COO\DanhGiaCBCNV_KyLuat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_KD\DanhGiaCBCNV_KyLuat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\LanhDao_HT\DanhGiaCBCNV_KyLuat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuong.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuongCVKTX.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_KD\DanhGiaCBCNV_KyLuat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_LanhDao_KD.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_LanhDao_HT.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_TPVaPP_KD.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\DanhGiaThang_TPVaPP_HT.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_DichVuKhachHangDiemThuongPhat.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuong.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuongCVKTX.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KhoiLuongCVPhatSinh.ascx" />
+    <Content Include="Admin\DotDanhGia\CeoDanhGia\TPVaPP_HT\DanhGiaCBCNV_KyLuat.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGia_DanhGiaCheo.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViec.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGia_TLHTCongViec.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecBaoCaoNgay.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyGiaoViec.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecPSVaNhanVien.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecKTXVaNhanVien.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecPS.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecKTX.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGia_Config.ascx" />
+    <Content Include="Admin\DotDanhGia\DanhGiaThang_DGNhanVien.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyNhanVienTheoNDG.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGiaBoPhan.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGiaCBCNVPhanNhomNhanVien.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGiaCBCNVChonNDG.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGiaTruongBoPhanChiTiet.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGia.ascx" />
+    <Content Include="Admin\DotDanhGia\DotDanhGiaCBCNVChiTiet.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecKPI.ascx" />
+    <Content Include="Admin\DotDanhGia\QuanLyCongViecKPIVaNhanVine.ascx" />
+    <Content Include="Admin\DotDanhGia\XemCongViecKPIGiaoChoNhanVien.ascx" />
+    <Content Include="Admin\PhongBan\BoPhanMaNhom.ascx" />
+    <Content Include="Admin\PhongBan\BoPhan_DiemKyLuat5S.ascx" />
+    <Content Include="Admin\PhongBan\BoPhan_KetQua.ascx" />
+    <Content Include="Admin\PhongBan\BoPhan_DangGiaSangTao.ascx" />
+    <Content Include="Admin\PhongBan\BoPhan_DanhGiaKyLuat.ascx" />
+    <Content Include="Admin\PhongBan\PhongBan.ascx" />
+    <Content Include="Admin\PhongBan\BoPhan_DiemSangTaoManagement.ascx" />
+    <Content Include="Admin\XepLoaiNhom\XepLoaiNhom.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53177</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

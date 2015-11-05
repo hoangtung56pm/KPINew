@@ -1,0 +1,3 @@
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\FilePickerControl\bin\Release\VmgPortal.FilePickerControl.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\FilePickerControl\obj\Release\ResolveAssemblyReference.cache
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\FilePickerControl\obj\Release\VmgPortal.FilePickerControl.dll

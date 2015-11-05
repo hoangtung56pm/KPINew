@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{820F5C42-7F85-445A-A220-B9D493A892CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VmgPortal.Library</RootNamespace>
+    <AssemblyName>VmgPortal.Library</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AJAXExtensionsToolbox, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\AJAXExtensionsToolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Licenses, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\App_Licenses.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PKILibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\PKILibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="RadCombobox.Net2, Version=2.8.1.0, Culture=neutral, PublicKeyToken=175e9829b585f1f6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\RadCombobox.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="SgmlReaderDll, Version=1.4.1544.40662, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.QuickStart, Version=1.0.2298.19374, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Telerik.QuickStart.dll</HintPath>
+    </Reference>
+    <Reference Include="webmsgbox, Version=1.0.1229.30666, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\webmsgbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Zip, Version=0.9.0.1215, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Zip.Tests, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Zip.Tests.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppEnv.cs" />
+    <Compile Include="Components\Commands\CommandController.cs" />
+    <Compile Include="Components\Commands\CommandInfo.cs" />
+    <Compile Include="Components\Caching\DataCaching.cs" />
+    <Compile Include="Components\Lang\MainLanguagesController.cs" />
+    <Compile Include="Components\Lang\MainLanguagesInfo.cs" />
+    <Compile Include="Components\Modules\ModuleControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Modules\ModuleControlController.cs" />
+    <Compile Include="Components\Modules\ModuleControlInfo.cs" />
+    <Compile Include="Components\Modules\ModuleController.cs" />
+    <Compile Include="Components\Modules\ModuleInfo.cs" />
+    <Compile Include="Components\Modules\ModuleSetting.cs" />
+    <Compile Include="Components\Portal\PortalCacheController.cs" />
+    <Compile Include="Components\Portal\PortalController.cs" />
+    <Compile Include="Components\Portal\PortalInfo.cs" />
+    <Compile Include="Components\Portal\PortalSetting.cs" />
+    <Compile Include="Components\Portal\Portal_CacheInfo.cs" />
+    <Compile Include="Components\Providers\DataAccessProvider.cs" />
+    <Compile Include="Components\Providers\DataAccessProviderConfiguration.cs" />
+    <Compile Include="Components\Providers\DataAccessProviderConfigurationHandler.cs" />
+    <Compile Include="Components\Providers\DataAccessProviderFactory.cs" />
+    <Compile Include="Components\Providers\SqlDataProvider.cs" />
+    <Compile Include="Components\Roles\RoleController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Roles\RoleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AdminPageTemp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AuthenticatedControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AuthenticatedControlTemp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AuthenticatedPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AuthenticatedPageTemp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Security\AuthenticateUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Security\SecurityAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Security\SecurityMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Security\SessionDALC.cs" />
+    <Compile Include="Components\Users\UserController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Users\UserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Users\UserOnlineController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Users\UserOnlineInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CollectionPager.cs" />
+    <Compile Include="Controls\FilePicker.cs" />
+    <Compile Include="Controls\InlineScript.cs" />
+    <Compile Include="Controls\PagingGridViewRepair.cs" />
+    <Compile Include="Controls\DynamicGridViewTemplate.cs" />
+    <Compile Include="Controls\GridViewRepair.cs" />
+    <Compile Include="Controls\GridViewFrontEnd.cs" />
+    <Compile Include="Controls\GridView.cs" />
+    <Compile Include="Controls\GroupRadioButton.cs" />
+    <Compile Include="Controls\PagingGridView.cs" />
+    <Compile Include="Controls\ProgressBar.cs" />
+    <Compile Include="Controls\SnapHeader.cs" />
+    <Compile Include="Definition.cs" />
+    <Compile Include="Helper\MySQLHelper.cs" />
+    <Compile Include="Helper\OracleHelper.cs" />
+    <Compile Include="HitCounterHttpModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedirectRule.cs" />
+    <Compile Include="Utilities\CheckCodeSubcodeExist.cs" />
+    <Compile Include="Utilities\ConvertUtility.cs" />
+    <Compile Include="Helper\DataReaderConverters.cs" />
+    <Compile Include="Utilities\MutilMessageBox.cs" />
+    <Compile Include="Utilities\ObjectCreateInstance.cs" />
+    <Compile Include="Utilities\EmailUtility.cs" />
+    <Compile Include="Helper\HtmlHelper.cs" />
+    <Compile Include="Utilities\Export.cs" />
+    <Compile Include="Utilities\LazyInitAttribute.cs" />
+    <Compile Include="Utilities\MessageBox.cs" />
+    <Compile Include="Utilities\MiscUtility.cs" />
+    <Compile Include="Utilities\MultimediaUtility.cs" />
+    <Compile Include="Utilities\ObjectHelper.cs" />
+    <Compile Include="Utilities\ObjectXMLSerializer.cs" />
+    <Compile Include="Utilities\RandomActiveCode.cs" />
+    <Compile Include="Helper\SQLHelper.cs" />
+    <Compile Include="Helper\Version.cs" />
+    <Compile Include="Components\Security\SSOSecurity.cs" />
+    <Compile Include="Utilities\RefreshAction.cs" />
+    <Compile Include="Utilities\RefreshModule.cs" />
+    <Compile Include="Utilities\RefreshPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\SessionUtility.cs" />
+    <Compile Include="Utilities\UnicodeUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\bin\VmgPortal.FilePicker.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\bin\VmgPortal.FilePicker.pdb
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\bin\RadUpload.Net2.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\bin\webmsgbox.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\bin\Zip.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\bin\Zip.Tests.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\obj\Release\ResolveAssemblyReference.cache
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\obj\Release\VmgPortal.FilePicker.dll
+D:\Vip_Project\vs2008\VMG_ButterflyPortal\TUFilePicker\obj\Release\VmgPortal.FilePicker.pdb

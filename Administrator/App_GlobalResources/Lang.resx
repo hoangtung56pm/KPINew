@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LOC_ERROR_CANNOTMOVETORECYCLEBIN" xml:space="preserve">
+    <value>Cannot move file(s) to Recycle Bin:</value>
+  </data>
+  <data name="LOC_ERROR_CANNOTMOVETORECYCLEBIN_ACCESSDENIED" xml:space="preserve">
+    <value>Cannot move file(s) to Recycle Bin: Access denied. Please, check that you have Write permission for the current directory and file.</value>
+  </data>
+  <data name="LOC_ERROR_CANNOTRESTORE" xml:space="preserve">
+    <value>Cannot restore files(s) from Recycle Bin:</value>
+  </data>
+  <data name="LOC_ERROR_CANNOTRESTORE_ACCESSDENIED" xml:space="preserve">
+    <value>Cannot restore files(s) from Recycle Bin: Access denied. Please, check that you have Write permission for the current directory and file.</value>
+  </data>
+  <data name="LOC_ERROR_CANNOTSELECTFILEINRECYCLEBIN" xml:space="preserve">
+    <value>Sorry, cannot select files from Recycle Bin.</value>
+  </data>
+  <data name="LOC_ERROR_COPY_DIRECTORY" xml:space="preserve">
+    <value>Sorry, cannot copy directory "{0}":</value>
+  </data>
+  <data name="LOC_ERROR_COPY_DIRECTORY_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot copy directory "{0}": Access denied. Please, check that you have Write permission for the current directory and file.</value>
+  </data>
+  <data name="LOC_ERROR_COPY_FILE" xml:space="preserve">
+    <value>Sorry, cannot copy file "{0}":</value>
+  </data>
+  <data name="LOC_ERROR_COPY_FILE_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot copy file "{0}": Access denied. Please, check that you have Write permission for the current directory and file.</value>
+  </data>
+  <data name="LOC_ERROR_CREATE_DIRECTORY" xml:space="preserve">
+    <value>Sorry, cannot create directory: </value>
+  </data>
+  <data name="LOC_ERROR_CREATE_DIRECTORY_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot create directory: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_CREATE_THUMBNAIL" xml:space="preserve">
+    <value>Sorry, cannot create thumbnails.</value>
+  </data>
+  <data name="LOC_ERROR_CREATE_THUMBNAIL_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot create thumbnails: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_DELETE_DIRECTORY_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot delete directory "{0}": Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_DELETE_DIRECTORY_FILE" xml:space="preserve">
+    <value>Sorry, cannot delete directory "{0}"</value>
+  </data>
+  <data name="LOC_ERROR_DELETE_FILE" xml:space="preserve">
+    <value>Sorry, cannot delete file "{0}":</value>
+  </data>
+  <data name="LOC_ERROR_DELETE_FILE_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot delete file "{0}": Access denied. Please, check that you have Write permission for the current directory and file.</value>
+  </data>
+  <data name="LOC_ERROR_INVALIDEXTENSION" xml:space="preserve">
+    <value>Sorry, this type of files is not served. Please, change extension of the file to one of supported ones.</value>
+  </data>
+  <data name="LOC_ERROR_MOVE_DIRECTORY" xml:space="preserve">
+    <value>Sorry, cannot move directory "{0}":</value>
+  </data>
+  <data name="LOC_ERROR_MOVE_DIRECTORY_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot move directory "{0}": Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_MOVE_FILE" xml:space="preserve">
+    <value>Sorry, cannot move file "{0}":</value>
+  </data>
+  <data name="LOC_ERROR_MOVE_FILE_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot move file "{0}": Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_NOFILESTOCOMPRESS" xml:space="preserve">
+    <value>Cannot download this folder, because neither this folder nor its subfolders have any files.</value>
+  </data>
+  <data name="LOC_ERROR_NOTVALIDNAME" xml:space="preserve">
+    <value>Not valid name</value>
+  </data>
+  <data name="LOC_ERROR_NOUPLOADDIRECTORY" xml:space="preserve">
+    <value>Sorry, the working (upload) directory is not specified. Please, specify it with using the fpUploadDir property.</value>
+  </data>
+  <data name="LOC_ERROR_RENAME_DIRECTORY" xml:space="preserve">
+    <value>Sorry, cannot rename directory:</value>
+  </data>
+  <data name="LOC_ERROR_RENAME_DIRECTORY_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot rename directory: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_RENAME_FILE" xml:space="preserve">
+    <value>Sorry, cannot rename file:</value>
+  </data>
+  <data name="LOC_ERROR_RENAME_FILE_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot rename file: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_SESSIONEMPTY" xml:space="preserve">
+    <value>Sorry, the web session expired or has not been established. Try to refresh the page in the main window and click the Browse button again. If it doesn't work, contact the support service.</value>
+  </data>
+  <data name="LOC_ERROR_TOOLARGEFILE" xml:space="preserve">
+    <value>Sorry, the file cannot be uploaded: it's too large. Max file size permitted is {0}.</value>
+  </data>
+  <data name="LOC_ERROR_UPLOAD" xml:space="preserve">
+    <value>Sorry, an error occured while uploading a file:</value>
+  </data>
+  <data name="LOC_ERROR_UPLOAD_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, an error occured while uploading a file: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_UPLOAD_FILEEXISTS" xml:space="preserve">
+    <value>Sorry, could not save the file because the file {0} already exist. Hint: check "Rewrite 
+file if already exists" to enable overwritting files which exist on upload. </value>
+  </data>
+  <data name="LOC_ERROR_ZIP_CANNOTCREATE" xml:space="preserve">
+    <value>Sorry, cannot create directory: Access denied.</value>
+  </data>
+  <data name="LOC_ERROR_ZIP_CANNOTCREATE_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot create Zip file: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_ERROR_ZIP_CANNOTCREATE_WRONGNAME" xml:space="preserve">
+    <value>Cannot download this folder: cannot create a zip archive if the name of the folder contains non-English letters.</value>
+  </data>
+  <data name="LOC_ERROR_ZIP_CANNOTEXTRACT" xml:space="preserve">
+    <value>Sorry, cannot extract Zip file:</value>
+  </data>
+  <data name="LOC_ERROR_ZIP_CANNOTEXTRACT_ACCESSDENIED" xml:space="preserve">
+    <value>Sorry, cannot extract Zip file: Access denied. Please, check that you have Write permission for the current directory.</value>
+  </data>
+  <data name="LOC_LABEL_1ARCHIVECREATED" xml:space="preserve">
+    <value>1 archive created ({0}) with {1} file(s)</value>
+  </data>
+  <data name="LOC_LABEL_1DIRECTORYRENAMED" xml:space="preserve">
+    <value>1 directory renamed</value>
+  </data>
+  <data name="LOC_LABEL_1FILERENAMED" xml:space="preserve">
+    <value>1 file renamed</value>
+  </data>
+  <data name="LOC_LABEL_1FILEUPLOADED" xml:space="preserve">
+    <value>1 file uploaded</value>
+  </data>
+  <data name="LOC_LABEL_1FILEUPLOADEDWITHFILES" xml:space="preserve">
+    <value>1 file uploaded with {0} files</value>
+  </data>
+  <data name="LOC_LABEL_1NEWFOLDERCREATED" xml:space="preserve">
+    <value>1 new folder created</value>
+  </data>
+  <data name="LOC_LABEL_ACTION" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="LOC_LABEL_BOTTOM" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="LOC_LABEL_CAMEINTORECYCLEBIN" xml:space="preserve">
+    <value>Came into Recycle Bin</value>
+  </data>
+  <data name="LOC_LABEL_DELETECONFIRM" xml:space="preserve">
+    <value>Do you want to proceed?</value>
+  </data>
+  <data name="LOC_LABEL_DIR" xml:space="preserve">
+    <value>Dir</value>
+  </data>
+  <data name="LOC_LABEL_DIRS" xml:space="preserve">
+    <value>Dir(s):</value>
+  </data>
+  <data name="LOC_LABEL_EDITMODEWARNING" xml:space="preserve">
+    <value>Please accept or decline name change before doing anything with a file or folder.</value>
+  </data>
+  <data name="LOC_LABEL_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_CHECK" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LOC_LABEL_FILELIST_DOWNLOAD" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_DOWNLOADFILE" xml:space="preserve">
+    <value>Download file</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_DOWNLOADFOLDER" xml:space="preserve">
+    <value>Download the entire folder in zip archive</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_LENGTH" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_RENAME" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_SELECTALL" xml:space="preserve">
+    <value>Select/Unselect All</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_UPDATE" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="LOC_LABEL_FILELIST_UPDATED" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="LOC_LABEL_FILES" xml:space="preserve">
+    <value>File(s)</value>
+  </data>
+  <data name="LOC_LABEL_FILESCHECKED" xml:space="preserve">
+    <value>file(s) checked</value>
+  </data>
+  <data name="LOC_LABEL_FILESCOPIED" xml:space="preserve">
+    <value>file(s) copied</value>
+  </data>
+  <data name="LOC_LABEL_FILESCUT" xml:space="preserve">
+    <value>file(s) cut</value>
+  </data>
+  <data name="LOC_LABEL_FILESDELETED" xml:space="preserve">
+    <value>file(s) deleted</value>
+  </data>
+  <data name="LOC_LABEL_FILESFOUND" xml:space="preserve">
+    <value>file(s) found</value>
+  </data>
+  <data name="LOC_LABEL_FILESPASTED" xml:space="preserve">
+    <value>file(s) pasted</value>
+  </data>
+  <data name="LOC_LABEL_FILESRESTORED" xml:space="preserve">
+    <value>file(s) restored</value>
+  </data>
+  <data name="LOC_LABEL_FILESUNZIPPED" xml:space="preserve">
+    <value>{0} files unzipped with {1} files</value>
+  </data>
+  <data name="LOC_LABEL_GO" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="LOC_LABEL_INFO" xml:space="preserve">
+    <value>Info:</value>
+  </data>
+  <data name="LOC_LABEL_KB" xml:space="preserve">
+    <value>KB</value>
+    <comment>Kilobytes</comment>
+  </data>
+  <data name="LOC_LABEL_LAUNCHED" xml:space="preserve">
+    <value>Launched...</value>
+  </data>
+  <data name="LOC_LABEL_MASKSCHECK" xml:space="preserve">
+    <value>Enter a list of masks separated by semicolon to check.</value>
+  </data>
+  <data name="LOC_LABEL_MASKSSEARCH" xml:space="preserve">
+    <value>Enter a list of masks separated by semicolon for search.</value>
+  </data>
+  <data name="LOC_LABEL_MOVEDONEFOLDERDOWN" xml:space="preserve">
+    <value>Moved one folder down</value>
+  </data>
+  <data name="LOC_LABEL_MOVEDONEFOLDERUP" xml:space="preserve">
+    <value>Moved one folder up</value>
+  </data>
+  <data name="LOC_LABEL_MOVEDTOROOT" xml:space="preserve">
+    <value>Moved to root</value>
+  </data>
+  <data name="LOC_LABEL_NEWFOLDER" xml:space="preserve">
+    <value>New folder</value>
+  </data>
+  <data name="LOC_LABEL_PATH" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="LOC_LABEL_PLEASEWAIT" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="LOC_LABEL_RECYCLEBIN" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="LOC_LABEL_RECYCLEBIN_DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="LOC_LABEL_RECYCLEBIN_RESTORE" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="LOC_LABEL_REFRESHED" xml:space="preserve">
+    <value>Screen refreshed</value>
+  </data>
+  <data name="LOC_LABEL_SEARCHTABLE_LENGTH" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="LOC_LABEL_SEARCHTABLE_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="LOC_LABEL_SEARCHTABLE_PATH" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="LOC_LABEL_SEARCHTABLE_UPDATED" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="LOC_LABEL_SELECTAFILE" xml:space="preserve">
+    <value>Select a file</value>
+  </data>
+  <data name="LOC_LABEL_TOP" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="LOC_LABEL_TOTAL" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_DONOTHING" xml:space="preserve">
+    <value>Do nothing</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_IFZIPUPLOADED" xml:space="preserve">
+    <value>If a Zip file is uploaded</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_OPTIONS" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_OVERWRITE" xml:space="preserve">
+    <value>Overwrite the file if already exists&amp;nbsp;**</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_SELECTUPONUPLOAD" xml:space="preserve">
+    <value>Select the file upon upload&amp;nbsp;*</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_UNZIPANDDELETE" xml:space="preserve">
+    <value>Unzip &amp; delete Zip file</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_UNZIPANDRETAIN" xml:space="preserve">
+    <value>Unzip and retain Zip file</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_UPLOADFILE" xml:space="preserve">
+    <value>Upload file</value>
+  </data>
+  <data name="LOC_LABEL_UPLOAD_UPLOADNOTE" xml:space="preserve">
+    <value>*&amp;nbsp;Applicable for a ZIP archive to be extracted upon upload.&lt;br&gt;
+**&amp;nbsp;Files extracted from a ZIP archive will overwrite the existing files anyway. </value>
+  </data>
+  <data name="LOC_LABEL_WENTTOFOUNDFILE" xml:space="preserve">
+    <value>Went to found file.</value>
+  </data>
+  <data name="LOC_LABEL_ZIP_CREATEZIP" xml:space="preserve">
+    <value>Create a Zip file called as the first file checked</value>
+  </data>
+  <data name="LOC_LABEL_ZIP_UNZIPHERE" xml:space="preserve">
+    <value>UnZip here</value>
+  </data>
+  <data name="LOC_LABEL_ZIP_UNZIPINTODIRECTORY" xml:space="preserve">
+    <value>UnZip checked ZIP files into a new directory</value>
+  </data>
+  <data name="LOC_LABEL_ZIP_ZIPANDDOWNLOAD" xml:space="preserve">
+    <value>Zip checked files &amp;amp; download</value>
+  </data>
+  <data name="LOC_LEFTRECYCLEBIN" xml:space="preserve">
+    <value>Left Recycle Bin</value>
+  </data>
+  <data name="LOC_PREFIX_THECOPY" xml:space="preserve">
+    <value>Copy</value>
+    <comment>Added to filename while copying if there is another file with such a name in the distination location. Ex.: Picture (Copy 2).jpg</comment>
+  </data>
+  <data name="LOC_TOOLBAR_COPY" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="LOC_TOOLBAR_CUT" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="LOC_TOOLBAR_DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="LOC_TOOLBAR_DOWNLOADANDZIP" xml:space="preserve">
+    <value>Work with Zip archives</value>
+  </data>
+  <data name="LOC_TOOLBAR_MASKCHECK" xml:space="preserve">
+    <value>Mask Check</value>
+  </data>
+  <data name="LOC_TOOLBAR_NEWFOLDER" xml:space="preserve">
+    <value>New Folder</value>
+  </data>
+  <data name="LOC_TOOLBAR_PASTE" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="LOC_TOOLBAR_RECYCLEBIN" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="LOC_TOOLBAR_REFRESH" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="LOC_TOOLBAR_REVERSECHECK" xml:space="preserve">
+    <value>Reverse Check</value>
+  </data>
+  <data name="LOC_TOOLBAR_ROOT" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="LOC_TOOLBAR_SEARCH" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="LOC_TOOLBAR_SEETHUMBNAILS" xml:space="preserve">
+    <value>See Thumbnails</value>
+  </data>
+  <data name="LOC_TOOLBAR_UP" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="LOC_TOOLBAR_UPLOAD" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+</root>
